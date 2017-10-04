@@ -3,6 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const models = require('../models');
+const routes = require('../routes');
 
 const app = express();
 
@@ -20,8 +21,11 @@ app.use((err, req, res, next) => {
 
 const port = 3000;
 
+app.use('/',routes);
+
 app.listen(port, () => {
-  console.log('listening on hyunjoo3000');
+  console.log('listening on hyunjoo 3000');
+
   models.db.sync()
     .then(() => {
       console.log('synced database');
