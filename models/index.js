@@ -7,12 +7,12 @@ const Place = db.define('place', {
   },
   city: {
     type: Sequelize.STRING
-  }, 
+  },
   phone: {
     type: Sequelize.STRING
   },
   location: {
-    type: Sequelize.ARRAY(Sequelize.FLOAT)
+    type: Sequelize.ARRAY(Sequelize.DECIMAL)
   }
 });
 
@@ -21,17 +21,17 @@ const Hotel = db.define('hotel', {
     type: Sequelize.STRING
   },
   num_stars: {
-    type: Sequelize.INTEGER
+    type: Sequelize.FLOAT
   },
   amenities: {
-    type: Sequelize.ARRAY(Sequelize.STRING)
+    type: Sequelize.STRING
   }
 });
 
 const Activity = db.define('activity', {
   name: {
     type: Sequelize.STRING
-  }, 
+  },
   age_range: {
     type: Sequelize.STRING
   }
@@ -42,12 +42,12 @@ const Restaurant = db.define('restaurant', {
     type: Sequelize.STRING
   },
   cuisine: {
-    type: Sequelize.ARRAY(Sequelize.STRING)
+    type: Sequelize.STRING
   },
   price: {
-    type: Sequelize.RANGE(Sequelize.INTEGER)
+    type: Sequelize.INTEGER
   }
-})
+});
 
 Hotel.belongsTo(Place);
 Restaurant.belongsTo(Place);

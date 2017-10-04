@@ -11,13 +11,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.1",
     "mapbox-gl": "^0.40.1",
     "morgan": "^1.9.0",
     "path": "^0.12.7",
-    "pg": "^6.4.1",
-    "sequelize": "^4.13.3",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.13.5",
     "webpack": "^3.6.0"
   },
   "devDependencies": {
