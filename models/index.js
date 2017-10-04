@@ -21,7 +21,7 @@ const Hotel = db.define('hotel', {
     type: Sequelize.STRING
   },
   num_stars: {
-    type: Sequelize.RANGE(Sequelize.FLOAT)
+    type: Sequelize.INTEGER
   },
   amenities: {
     type: Sequelize.ARRAY(Sequelize.STRING)
