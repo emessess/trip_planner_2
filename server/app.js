@@ -3,7 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const models = require('../models');
-
+const routes = require('../routes');
 const app = express();
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
@@ -11,6 +11,8 @@ app.use(morgan('dev'));
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: false}));
+
+app.use('/', routes);
 
 app.use((err, req, res, next) => {
   res.status(err.status || 500);
